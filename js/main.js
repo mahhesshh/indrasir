@@ -3,6 +3,19 @@ let navbar = document.querySelector(".navbar");
 let searchBox = document.querySelector(".search-box .bx-search");
 // let searchBoxCancel = document.querySelector(".search-box .bx-x");
 
+const menuToggle = document.getElementById("menu-toggle");
+const links = document.querySelector(".links");
+
+menuToggle.addEventListener("click", () => {
+  if(links.style.display === "block"){
+    links.style.display = "none";
+  }else{
+    links.style.display = "block";
+  }
+  
+});
+
+
 searchBox.addEventListener("click", ()=>{
   navbar.classList.toggle("showInput");
   if(navbar.classList.contains("showInput")){
